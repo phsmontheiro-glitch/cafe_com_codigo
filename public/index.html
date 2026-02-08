@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café com Código | Inscrição</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="welcome-side">
+        <div class="welcome-content">
+          <h1>Cafe com Codigo</h1>
+
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80"
+                  alt="Jornal de Tecnologia"
+                />
+              </div>
+              <div class="carousel-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=600&q=80"
+                  alt="Código Programação"
+                />
+              </div>
+              <div class="carousel-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                  alt="Tecnologia e Hardware"
+                />
+              </div>
+            </div>
+          </div>
+
+          <h1>BEM-VINDO!</h1>
+          <p>
+            O <strong>Café com Código</strong> é o seu jornal semanal de
+            tecnologia. Curadoria humana e direta ao ponto para você começar a
+            semana bem informado enquanto toma sua primeira dose de cafeína.
+          </p>
+        </div>
+      </div>
+
+      <div class="register-side">
+        <form class="register-form" id="formCadastro">
+          <h2>Cadastro</h2>
+
+          <div class="input-group">
+            <input type="text" id="nome" required placeholder=" " />
+            <label for="nome">Nome (Usuario)</label>
+          </div>
+
+          <div class="input-group">
+            <input type="email" id="email" required placeholder=" " />
+            <label for="email">E-mail</label>
+          </div>
+
+          <div class="input-group">
+            <input type="date" id="dataNascimento" placeholder=" " />
+            <label for="dataNascimento">Data de Nascimento</label>
+          </div>
+
+          <button type="submit" class="btn-register">Cadastrar</button>
+          <p id="mensagem" class="status-msg"></p>
+        </form>
+        <div class="footer-sign">©2026 Desenvolvidor - Pedro Monteiro</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1d23; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    min-height: 550px;
+    display: flex;
+    position: relative;
+    background-color: #0d1117;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 152, 0, 0.5);
+    box-shadow: 0 0 25px rgba(255, 152, 0, 0.3), inset 0 0 10px rgba(255, 152, 0, 0.1);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(115deg, #161b22 50%, #0d1117 50%);
+    z-index: 1;
+}
+
+.welcome-side, .register-side {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* --- CARROSSEL --- */
+.carousel-container {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    margin: 15px 0 25px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 152, 0, 0.4);
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%; 
+    height: 100%;
+    animation: slide-flow 12s infinite ease-in-out;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes slide-flow {
+    0%, 25% { transform: translateX(0); }
+    33%, 58% { transform: translateX(-33.33%); }
+    66%, 91% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); }
+}
+
+/* --- CONTEÚDO E TEXTOS --- */
+.welcome-content h1 {
+    color: #ff9800;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 152, 0, 0.6);
+}
+
+.welcome-content p {
+    color: #c9d1d9;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* --- TÍTULO CADASTRO EM NEON --- */
+.register-form h2 {
+    color: #ff9800; 
+    text-align: right;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Efeito Neon */
+    text-shadow: 0 0 10px rgba(255, 152, 0, 0.5), 0 0 20px rgba(255, 152, 0, 0.2);
+}
+
+.footer-sign {
+    margin-top: 40px;
+    font-size: 11px;
+    color: #8b949e;
+    letter-spacing: 1px;
+}
+
+/* --- FORMULÁRIO --- */
+.register-side { align-items: center; }
+.register-form { width: 100%; max-width: 300px; }
+
+.input-group { position: relative; margin-bottom: 25px; }
+
+.input-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #30363d;
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #8b949e;
+    transition: 0.3s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -15px;
+    font-size: 12px;
+    color: #ff9800;
+}
+
+.input-group input:focus {
+    border-bottom: 1px solid #ff9800;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #ff9800;
+    color: #ff9800;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-register:hover {
+    background: #ff9800;
+    color: #0d1117;
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+    .container { flex-direction: column; height: auto; }
+    .container::before { display: none; }
+    .welcome-side { padding: 40px 30px; text-align: center; }
+    .register-side { padding: 20px 30px 40px 30px; }
+    .register-form h2 { text-align: center; }
+}
