@@ -14,6 +14,7 @@ O projeto tem como objetivo simular um serviço real de newsletter, focando prin
 O frontend é simples e funcional, utilizado apenas para:
 - Cadastro do usuário
 - Cancelamento da inscrição
+- Confirmação de usário
 
 Toda a lógica principal está concentrada no servidor.
 
